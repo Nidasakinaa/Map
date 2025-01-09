@@ -5,7 +5,7 @@ html, body {
   width: 100%;
   height: 100%;
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #dfd5d5;
 }
 
 /* Header styling */
@@ -38,6 +38,7 @@ header h2 {
   background-color: #c49dc9;
   color: #333;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
 }
 
 #map-title-description h3 {
@@ -54,21 +55,60 @@ header h2 {
 
 /* Map container */
 #map {
-  width: calc(100% - 40px);
+  width: calc(100% - 40px); /* Account for body padding */
   height: calc(100vh - 180px); /* Adjust for title and header height */
   background-color: #1a191a;
   position: relative;
   padding: 10px;
 }
 
-/* Map container */
-#map {
-  width: calc(100% - 40px); /* Account for body padding (20px on each side) */
-  height: calc(100vh - 90px); /* Adjust for the smaller header height */
-  background-color: #ae7dd5;
-  position: relative;
-  padding: 10px; /* Add padding for the map content */
-  margin: 0 auto; /* Centers the map within the body */
+/* Make map more responsive */
+@media (max-width: 768px) {
+  header {
+    font-size: 20px;  /* Smaller font for mobile */
+    padding: 10px;  /* Reduce padding for smaller screens */
+  }
+
+  #map-title-description {
+    padding: 15px;  /* Adjust padding for mobile */
+  }
+
+  #map {
+    width: calc(100% - 20px);  /* Reduce width for smaller screens */
+    height: calc(100vh - 150px);  /* Adjust height for mobile */
+  }
+
+  #map-title-description h3 {
+    font-size: 24px;  /* Smaller font for title */
+  }
+
+  #map-title-description p {
+    font-size: 14px;  /* Smaller font for description */
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    font-size: 18px;  /* Even smaller font for very small screens */
+    padding: 8px 10px;
+  }
+
+  #map-title-description {
+    padding: 10px;  /* Adjust for small screens */
+  }
+
+  #map-title-description h3 {
+    font-size: 20px;  /* Adjust title font */
+  }
+
+  #map-title-description p {
+    font-size: 12px;  /* Adjust description font */
+  }
+
+  /* Map container adjustments */
+  #map {
+    height: calc(100vh - 120px); /* Further height adjustment for smaller screens */
+  }
 }
 
 /* Popup styles */
