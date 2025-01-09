@@ -3,15 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Peta Interaktif</title>
+  <title>Mosque Map</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div id="map"></div>
+    <header>
+        <h2>Mosque Map</h2>
+    </header>
+    
+    <!-- Title and Description above the map -->
+    <div id="map-title-description">
+        <h3>Discover Mosques Around You</h3>
+        <p>Explore different mosques in your area, with the ability to add and view information about each location.</p>
+    </div>
 
-  <!-- Popup untuk menambahkan marker -->
+  <!-- Map container -->
+  <div id="map">MosqMap</div>
+
+  <!-- Popup for adding marker -->
   <div id="popup" class="popup hidden">
-    <h3></h3>
+    <h3>Tambahkan Marker</h3>
     <label for="marker-description">Deskripsi Marker:</label>
     <input type="text" id="marker-description" placeholder="Masukkan deskripsi">
     <br><br>

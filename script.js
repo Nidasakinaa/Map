@@ -146,8 +146,8 @@ function addUserLocationMarker() {
           zoom: 16,
         });
 
-        // Cari lokasi parkir terdekat
-        const nearestLocation = findNearestLocation(userCoordinates, parkingLocations);
+        // Cari lokasi Masjid terdekat
+        const nearestLocation = findNearestLocation(userCoordinates, mosqueLocations);
         if (nearestLocation) {
           const nearestMarker = new Feature({
             geometry: new Point(fromLonLat(nearestLocation.coordinates)),
@@ -167,7 +167,7 @@ function addUserLocationMarker() {
 
           // Menampilkan notifikasi lokasi terdekat
           Swal.fire({
-            title: "Lokasi Parkir Terdekat",
+            title: "Lokasi Masjid Terdekat",
             text: `Lokasi terdekat adalah ${nearestLocation.name}.`,
             icon: "info",
           });
@@ -191,10 +191,10 @@ function addUserLocationMarker() {
   }
 }
 
-// Lokasi parkir
-const parkingLocations = [
-  { name: "Parkir A", coordinates: [107.580642, -6.883722] },
-  { name: "Parkir B", coordinates: [107.579529, -6.882788] },
+// Lokasi masjid
+const mosqueLocations = [
+  { name: "Masjid A", coordinates: [107.580642, -6.883722] },
+  { name: "Masjid B", coordinates: [107.579529, -6.882788] },
 ];
 
 function findNearestLocation(userCoordinates, locations) {
